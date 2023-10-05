@@ -5,10 +5,6 @@ OriginalListofPetNames = ["pookiebear", "malewife", "prince charming", "sweetiep
 
 FormattedRandomPetNames = (random.choices(OriginalListofPetNames, k=10))
 print(*FormattedRandomPetNames, sep = ", ")
-
-# Replace 'YOUR_TOKEN' with your Discord bot token
-TOKEN = 'MTE1OTM5NzMyMzg2OTI3MDAxNw.GmDg8h.19kkhhXWvdsXKgx9cyJAPmUdC7wxvsaJhsYwNU'
-
 # Define your intents
 intents = discord.Intents.default()
 intents.message_content = True  # Enable the message content intent
@@ -67,4 +63,4 @@ async def on_voice_state_update(member, before, after):
             message = f"{member.display_name} joined an empty voice channel: {after.channel.name}."
             await channel_to_update.send(message)
 
-bot.run(TOKEN)
+bot.run(DISCORD_TOKEN)
